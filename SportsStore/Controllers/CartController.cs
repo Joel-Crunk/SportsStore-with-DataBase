@@ -46,6 +46,10 @@ string returnUrl)
             }
             return RedirectToAction("Index", new { returnUrl });
         }
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
+        }
     }
 }
   
