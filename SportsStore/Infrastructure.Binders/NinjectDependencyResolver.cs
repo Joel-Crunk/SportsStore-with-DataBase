@@ -29,6 +29,7 @@ namespace SportsStore.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
+
             EmailSettings emailSettings = new EmailSettings
             {
                 WriteAsFile = bool.Parse(ConfigurationManager
