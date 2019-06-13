@@ -52,6 +52,10 @@ string returnUrl)
         {
             return View(new ShippingDetails());
         }
+        public PartialViewResult Summary(Cart cart)
+        {
+            return PartialView(cart);
+        }
         [HttpPost]
         public ViewResult Checkout(Cart cart, ShippingDetails shippingDetails)
         {

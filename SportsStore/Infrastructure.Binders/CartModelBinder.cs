@@ -14,7 +14,7 @@ namespace SportsStore.WebUI.Infrastructure.Binders
         {
             // get the Cart from the session
             Cart cart = null;
-            if (controllerContext.HttpContext.Session != null)
+            if (controllerContext.HttpContext.Session[sessionKey] != null)
             {
                 cart = (Cart)controllerContext.HttpContext.Session[sessionKey];
             }
